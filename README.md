@@ -1,6 +1,9 @@
 #### Zebra-Printer_Print_EPC_and TID_Information
 ## RFIDラベルのTID/EPC情報を印刷、ホストに送信するサンプルZPL
 
+印刷と同時にインレイの情報を取得し、文字やバーコードとして印刷したり、ホストに返信したい場合があります。その場合は、下記ZPLを参考にZPLを実装してみてください。
+
+
 </br>
 
 
