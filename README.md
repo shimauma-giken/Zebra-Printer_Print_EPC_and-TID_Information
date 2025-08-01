@@ -72,34 +72,34 @@
 
 ### 参考： RFID バンク番号一覧
 
-    <table border="1" cellpadding="8" cellspacing="0">
-    <thead>
-        <tr>
-        <th>メモリバンク名</th>
-        <th>番号</th>
-        <th>説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <td>Reserved</td>
-        <td>00</td>
-        <td>アクセスパスワードとキルパスワードを格納。タグの保護・無効化に使用。</td>
-        </tr>
-        <tr>
-        <td>EPC</td>
-        <td>01</td>
-        <td>商品識別コード（EPC）を格納。サプライチェーンや在庫管理に使用。</td>
-        </tr>
-        <tr>
-        <td>TID</td>
-        <td>02</td>
-        <td>チップ固有のID（Tag Identifier）を格納。読み取り専用。</td>
-        </tr>
-        <tr>
-        <td>User</td>
-        <td>03</td>
-        <td>任意のユーザーデータを格納可能。カスタム情報や履歴管理などに使用。</td>
-        </tr>
-    </tbody>
-    </table>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead>
+    <tr>
+    <th>メモリバンク名</th>
+    <th>番号</th>
+    <th>説明</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>Reserved</td>
+    <td>00</td>
+    <td>アクセスパスワードとキルパスワードを格納。タグの保護・無効化に使用。</td>
+    </tr>
+    <tr>
+    <td>EPC</td>
+    <td>01</td>
+    <td>商品識別コード（EPC）を格納。サプライチェーンや在庫管理に使用。</td>
+    </tr>
+    <tr>
+    <td>TID</td>
+    <td>02</td>
+    <td>チップ固有のID（Tag Identifier）を格納。読み取り専用。</td>
+    </tr>
+    <tr>
+    <td>User</td>
+    <td>03</td>
+    <td>任意のユーザーデータを格納可能。カスタム情報や履歴管理などに使用。</td>
+    </tr>
+</tbody>
+</table>
