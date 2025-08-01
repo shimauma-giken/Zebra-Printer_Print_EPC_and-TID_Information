@@ -1,0 +1,2 @@
+# Zebra-Printer_Print_EPC_and TID_Information
+RFIDラベルのTID/EPC情報を印刷、ホストに送信するサンプルZPL
