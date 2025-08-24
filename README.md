@@ -62,9 +62,25 @@
 
 </br>
 
-### 備考
+### QRを印刷する場合
 
-- ZPLの仕様上、QRに^RFRで取得した情報を代入することはできない。
+QRにEPC/TIDの情報を格納する場合は^FEを利用することで印刷ができるようになります。
+
+    ```
+    << Link-OS 6.8以上のみサポート>>
+
+    ^XA
+    ^PW900
+    ^FN5^RFR,H,0,12,2^FS
+    ^FO220,100^BQN,2,3^FE#^FDQA,#5#^FS
+    ^FO220,50^A0N,40,40^FE#^FDTID:#5#^FS
+    ^FH_^HV5,,TID: ,_0D_0A,^FS
+    ^XZ
+    ```
+
+^FEの詳細については下記リンクを参照ください。
+
+[Using FE Command to Read TID and Print it Into QR Code](https://supportcommunity.zebra.com/s/article/000028772?language=en_US&name=000028772)
 
 
 
