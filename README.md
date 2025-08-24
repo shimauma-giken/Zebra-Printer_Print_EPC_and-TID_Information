@@ -80,9 +80,60 @@ QRにEPC/TIDの情報を格納する場合は^FEを利用することで印刷�
 
 [Using FE Command to Read TID and Print it Into QR Code](https://supportcommunity.zebra.com/s/article/000028772?language=en_US&name=000028772)
 
+</br>
 
+## ZebraDeisgner 3 Proに追記する場合
+
+ZebraDeisgner 3 ProからEPC/TIDの情報を印刷する場合は、マニュアルで作成したコードをカスタムコマンドとして登録することで対応が可能。
+
+1. Zebra Designer 3 Proを起動し、任意のラベルデザインを作成する。
+1. プリンタープロパティを選択
+    ```
+    "ドキュメントのプロパティ" > "プリンタープロパティ" 
+
+1. "カスタムコマンド" > "各ページのエレメントの後" に任意のZPLコードを入力する。
+    
+    |||
+    |-|-|
+    |種類:| 文字
+    |内容:| 追加したいZPLコードを入力
+
+    ![alt text](image.png)
+    </br>
+
+
+1. [OK]を選択する。
+1. 印刷をし、追加ZPLコードが反映されているか確認する。
 
 </br>
+</br>
+
+#### 参考：作成されるZPL例
+
+追加ZPLコードは^PQの前に挿入される。（★のコード）
+
+    ```
+    CT~~CD,~CC^~CT~
+    ^XA
+    ~JSN
+    ^LT0
+    ^PMN
+    ^CI27
+    ^XZ
+    ^XA
+    ^LS0
+    ^FT782,270^A0N,42,43^FH\^CI28^FDZebra Technologies^FS^CI27
+    ^FN5^RFR,H,0,12,2^FS ★
+    ^FO220,100^BQN,2,3^FE#^FDQA,#5#^FS ★
+    ^FO220,50^A0N,40,40^FE#^FDTID:#5#^FS ★
+    ^PQ1,0,1,Y
+    ^XZ
+    ``
+
+</br>
+</br>
+
+
 
 ### 参考： RFID バンク番号一覧
 
